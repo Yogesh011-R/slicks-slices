@@ -2,10 +2,6 @@ import React from 'react';
 import Img from 'gatsby-image';
 import SEO from '../../components/SEO';
 const SliceMaster = ({ data: { sliceMaster } }) => {
-  console.log(
-    '🚀 ~ file: {SanityPerson.slug__current}.js ~ line 4 ~ SliceMaster ~ data',
-    sliceMaster
-  );
   return (
     <>
       <SEO title={sliceMaster.name} image={SliceMaster.image?.src} />

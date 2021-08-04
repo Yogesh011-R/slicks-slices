@@ -10,7 +10,6 @@ const PizzasPage = ({
   },
   pageContent,
 }) => {
-  console.log('🚀 ~ file: pizzas.js ~ line 13 ~ pageContent', pageContent);
   return (
     <>
       <SEO title={'All Pizzas'} />

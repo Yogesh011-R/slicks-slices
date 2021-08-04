@@ -3,10 +3,6 @@ import ItemGrid from './ItemGrid';
 import LoadingGrid from './LoadingGrid';
 
 const CurrentlySlicing = ({ slicemasters }) => {
-  console.log(
-    '🚀 ~ file: CurrentlySlicing.js ~ line 4 ~ CurrentlySlicing ~ slicemasters',
-    slicemasters
-  );
   return (
     <div>
       <h2 className='center'>

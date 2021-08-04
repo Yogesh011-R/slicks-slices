@@ -9,10 +9,6 @@ const Toppings = ({
   },
   pageContext,
 }) => {
-  console.log(
-    '🚀 ~ file: {SanityTopping.name}.js ~ line 11 ~ pageContext',
-    pageContext
-  );
   return (
     <>
       <SEO title={`Pizzas with ${pageContext.name}`} />

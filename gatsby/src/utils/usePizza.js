@@ -8,7 +8,7 @@ import React from 'react';
 export default function usePizza({ pizzas, values }) {
   // const [order, setOrder] = useState([]);
   const [order, setOrder] = useContext(OrderContext);
-  console.log('🚀 ~ file: usePizza.js ~ line 10 ~ usePizza ~ order', order);
+
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
