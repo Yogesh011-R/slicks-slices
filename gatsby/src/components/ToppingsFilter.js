@@ -1,7 +1,8 @@
-import { Link, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import slugify from 'slugify';
+
 const ToppingsStyles = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +15,7 @@ const ToppingsStyles = styled.div`
     grid-template-columns: auto 1fr;
     gap: 0 1rem;
     background: var(--grey);
+    font-size: clamp(1.5rem, 1.4vw, 2.5rem);
     align-items: center;
     border-radius: 2px;
     &[aria-current='page'] {

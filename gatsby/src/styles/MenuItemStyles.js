@@ -22,6 +22,16 @@ export const MenuItemStyles = styled.div`
   button + button {
     margin-left: 1rem;
   }
+  @media (max-width: 500px) {
+    button + button:last-child {
+      margin: 0.8rem 0 0 0;
+    }
+  }
+  @media (max-width: 400px) {
+    button + button {
+      margin: 0.8rem 1rem 0 0;
+    }
+  }
 
   .remove {
     background: none;

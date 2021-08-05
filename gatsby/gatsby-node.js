@@ -46,11 +46,7 @@ const turnSliceMastersIntoPage = async ({ graphql, actions }) => {
   `);
 
   const pageSize = parseInt(process.env.GATSBY_PAGE_SIZE);
-  const pageCount = Math.ceil(data.allSanityPerson.totalCount / pageSize) - 1;
-  console.log(
-    '🚀 ~ file: gatsby-node.js ~ line 50 ~ turnSliceMastersIntoPage ~ pageCount',
-    pageCount
-  );
+  const pageCount = Math.ceil(data.allSanityPerson.totalCount / pageSize);
 
   Array.from({ length: pageCount }).forEach((_, i) => {
     actions.createPage({

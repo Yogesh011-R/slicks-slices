@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import SEO from '../../components/SEO';
+import { graphql } from 'gatsby';
 const SliceMaster = ({ data: { sliceMaster } }) => {
   return (
     <>

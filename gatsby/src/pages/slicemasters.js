@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
@@ -39,6 +39,7 @@ const SliceMastersStyles = styled.div`
 
 const SliceMasters = ({ data: { allSanityPerson }, pageContext }) => {
   const { sliceMasters } = allSanityPerson;
+
   return (
     <>
       <SEO title={`Slicemasters - Page ${pageContext.current || 1}`} />
@@ -71,11 +72,7 @@ export default SliceMasters;
 
 export const query = graphql`
   query SliceMasters($skip: Int = 0, $pageSize: Int = 3) {
-    allSanityPerson(
-      filter: { id: { ne: "-886c3ffb-7060-501a-9e47-3b3a429d2096" } }
-      limit: $pageSize
-      skip: $skip
-    ) {
+    allSanityPerson(limit: $pageSize, skip: $skip) {
       totalCount
       sliceMasters: nodes {
         image {

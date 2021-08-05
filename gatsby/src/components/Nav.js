@@ -42,12 +42,37 @@ const NavStyles = styled.nav`
   a {
     font-size: 2rem;
     text-decoration: none;
+    display: block;
     &:hover {
       color: var(--red);
     }
     &[aria-current='page'] {
       color: red;
     }
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 600px) {
+    --column: 4;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--grey);
+    padding-bottom: 2rem;
+    ul {
+      grid-template-columns: auto auto;
+      grid-template-columns: repeat(var(--column), 1fr);
+      justify-items: center;
+    }
+    .logo-item {
+      order: 0;
+      grid-column: 1 / -1;
+    }
+    .logo {
+      transform: none;
+    }
+  }
+  @media (max-width: 500px) {
+    --column: 2;
   }
 `;
 
@@ -61,7 +86,7 @@ const Nav = () => {
         <li>
           <Link to='/pizzas'>Pizza Menu</Link>
         </li>
-        <li>
+        <li className='logo-item'>
           <Link to='/'>
             <Logo />
           </Link>
